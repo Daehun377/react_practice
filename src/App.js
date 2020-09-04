@@ -32,6 +32,23 @@ class App extends Component {
 
 
     //라이프사이클 함수 선언
+    // Render: componentWillMount() -> render() -> componentDidMount()
+    // Update: componentWillReceiveProps() -> shouldComponentUpdate() -> componentWillUpdate() -> render() -> componentDidUpdate()
+
+    componentDidMount() { //마운트 되고 나서 실행되는 함수 - 데이터 불러올 때나 토큰 체크를 할때
+        setTimeout(() => {
+            this.setState({
+                movies : [
+                    {
+                        title : "Trainspotting",
+                        poster: "https://resizing.flixster.com/OUEArjor-MbyCV6GqLU85Hk9jQI=/300x300/v1.bjs1NTQ3OTM7ajsxNzQ2NjsxMjAwOzIwMDA7MTMzMQ"
+                    },
+                    ...this.state.movies
+                ]
+            })
+        }, 3000)
+    }
+
     //함수선언
 
     render() {
