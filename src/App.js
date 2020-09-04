@@ -38,7 +38,7 @@ class App extends Component {
     callApi = () => {
         return fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=8597e491ed6e80f0de12e349eb60ea6e&language=en-US&page=1")
             .then(potato => potato.json())
-            .then(json => json.postInfo)
+            .then(data => console.log(data))
             .catch(err => console.log(err))
     }
 
