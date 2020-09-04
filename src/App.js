@@ -12,7 +12,7 @@ const movies = [
         poster: "https://upload.wikimedia.org/wikipedia/en/9/99/Full_Metal_Jacket_poster.jpg"
     },
     {
-        title: {},
+        title: "great",
         poster: "https://upload.wikimedia.org/wikipedia/en/b/bb/Oldboy_2013_film_poster.jpg"
     },
     {
@@ -28,15 +28,14 @@ class App extends Component {
             <div className={"App"}>
                 {movies.map(movie => {
                     return (
-                        <div>
-                            <Movie title = {movie.title}/>
-                        </div>
+                            <Movie poster = {movie.poster} title = {movie.title}/>
                     )
                 })}
             </div>
         );
     }
-}
+};
+
 
 
 export default App;

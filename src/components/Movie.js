@@ -1,11 +1,22 @@
 import React from 'react';
+import PropTypes from "prop-types";
+import Poster from "../components/Movieposter";
+import "../App.css"
 
-const Movie = ({title}) => {
+
+const Movie = ({title, poster}) => {
     return (
-        <div>
+        <div className={"App"}>
             <h1>{title}</h1>
+            <Poster source={poster}/>
         </div>
     );
+};
+
+
+Movie.propTypes = {
+    title : PropTypes.string.isRequired,
+    poster : PropTypes.string.isRequired
 };
 
 export default Movie;
